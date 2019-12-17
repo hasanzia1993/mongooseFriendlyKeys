@@ -2,8 +2,9 @@
 Mongoose does not allow . (dot) in keys, so this async function can be used to make object keys of any depth, mongoose friendly keys.
 
 **Usage**
-``` const response = await mongooseFriendly(object,' ');
-    console.log(response);
+``` 
+const response = await mongooseFriendly(object,' ');
+console.log(response);
 ```
 
 **Function**
