@@ -1,10 +1,10 @@
 # mongooseFriendlyKeys
 Mongoose does not allow . (dot) in keys, so this async function can be used to make object keys of any depth, mongoose friendly keys.
 
+```
 mongooseFriendly = async (obj,replacementSymbol='_')=>{
     if(replacementSymbol==='.')
         throw "Cannot use . (dot) as replacement symbol use _ or __ etc";
-
     if(typeof obj === "object"){
         //get all object keys
         const keys = Object.keys(obj);
@@ -19,7 +19,7 @@ mongooseFriendly = async (obj,replacementSymbol='_')=>{
         //return the new object with mongoose friendly keys
         return newObj;
     }
-    
     //in case the parameter is not an object return the value
     return obj;
 }
+```
